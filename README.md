@@ -14,7 +14,7 @@ Simple Home Manager module for Rust nightly toolchain with flexible configuratio
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rust-nightly.url = "github:yourusername/rust-nightly-flake";
+    rust-nix.url = "github:hambosto/rust-nix";
   };
 
   outputs = { nixpkgs, home-manager, rust-nightly, ... }: {
@@ -54,7 +54,7 @@ programs.rust-nix = {
 };
 ```
 
-#### Full toolchain (your example)
+#### Default profile toolchain (for example)
 ```nix
 programs.rust-nix = {
   enable = true;
