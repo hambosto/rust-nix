@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Needed for committing and pushing
+  contents: write
 
 jobs:
   update:
@@ -26,7 +26,7 @@ jobs:
 
       - name: Update flake inputs
         run: |
-          nix flake update --commit-lock-file
+          nix flake update
 
       - name: Check if lock file changed
         id: check_changes
