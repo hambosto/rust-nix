@@ -21,7 +21,6 @@
       ...
     }: let
       cfg = config.programs.rust-nix;
-
       rustPkgs = import nixpkgs {
         inherit (pkgs) system;
         overlays = [rust-overlay.overlays.default];
